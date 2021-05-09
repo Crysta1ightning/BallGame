@@ -74,7 +74,7 @@ class BallGame(Widget):
 			self.ball2.velocity_y *= -1
 		# if collide
 		if self.ball1.collide_widget(self.ball2):
-			if self.ball1.velocity != [0, 0]:
+			if self.ball1.velocity != [0, 0] and self.ball2.velocity != [0, 0]:
 				print(self.ball1.velocity)
 				temp = self.ball1.velocity_x
 				self.ball1.velocity_x = self.ball2.velocity_x
