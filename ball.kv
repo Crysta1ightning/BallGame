@@ -1,0 +1,24 @@
+#:kivy 1.0.9
+
+<Ball>:
+    size: 50, 50 
+    canvas:
+    	Color:
+	    	rgb: self.color
+        Ellipse:
+            pos: self.pos
+            size: self.size 
+
+<BallGame>:
+    ball1: ball1
+    ball2: ball2
+    Ball:
+        id: ball1
+        x: root.x
+        center_y: root.center_y
+    Ball:
+        id: ball2
+        x: root.width - self.width
+        center_y: root.center_y
+
+
